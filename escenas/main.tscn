@@ -1,22 +1,95 @@
 [gd_scene format=3 uid="uid://bprp11e82vjyn"]
 
 [ext_resource type="Texture2D" uid="uid://dh0mjv14lg7dk" path="res://sprites/icon.svg" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://dixmir83thhju" path="res://escenas/jugador.tscn" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://djxvjltfij5p5" path="res://escenas/mapa.gd" id="2_0kxa1"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jumxm"]
+texture = ExtResource("1_ig7tw")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_57qmd"]
+sources/0 = SubResource("TileSetAtlasSource_jumxm")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_yf5fn"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_g4v7s"]
+width = 1024
+height = 1024
+noise = SubResource("FastNoiseLite_yf5fn")
 
 [node name="Node2D" type="Node2D" unique_id=568024470]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1467578348]
+[node name="mapa" type="TileMapLayer" parent="." unique_id=2037477669]
+tile_set = SubResource("TileSet_57qmd")
+script = ExtResource("2_0kxa1")
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2043045439]
-position = Vector2(576, 548)
-scale = Vector2(9, 1.5625)
-texture = ExtResource("1_ig7tw")
+[node name="ruido_mapa" type="Sprite2D" parent="mapa" unique_id=1736887794]
+position = Vector2(-3312, -1112)
+texture = SubResource("NoiseTexture2D_g4v7s")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1682131754]
-visible = false
-position = Vector2(576, 548)
-scale = Vector2(9, 1.5625)
-polygon = PackedVector2Array(59.1, -64, -59, -64, -63.8, -59, -64, 61, -60.3, 64, 59.6, 64, 63.9, 59, 64, -61.1)
-
-[node name="NodoPersonaje" parent="." unique_id=1783876786 instance=ExtResource("2_0xm2m")]
-position = Vector2(568, 416)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=592897697]
+position = Vector2(1920, 1088)
+zoom = Vector2(0.5, 0.5)
