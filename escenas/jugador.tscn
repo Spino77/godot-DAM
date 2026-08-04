@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://dixmir83thhju"]
 
-[ext_resource type="Script" uid="uid://bjcoffuf0ckix" path="res://personaje.gd" id="1_omvyu"]
-[ext_resource type="Texture2D" uid="uid://dh0mjv14lg7dk" path="res://icon.svg" id="2_8o684"]
+[ext_resource type="Script" uid="uid://bjcoffuf0ckix" path="res://scripts/personaje.gd" id="1_jpodt"]
+[ext_resource type="Texture2D" uid="uid://dh0mjv14lg7dk" path="res://sprites/icon.svg" id="2_njcx7"]
 
 [node name="NodoPersonaje" type="Node2D" unique_id=1783876786]
 
 [node name="Personaje" type="CharacterBody2D" parent="." unique_id=1594212248]
-script = ExtResource("1_omvyu")
+script = ExtResource("1_jpodt")
 
 [node name="SpritePersonaje" type="Sprite2D" parent="Personaje" unique_id=35787280]
 scale = Vector2(0.5234375, 0.5234375)
-texture = ExtResource("2_8o684")
+texture = ExtResource("2_njcx7")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Personaje" unique_id=1504080814]
 visible = false

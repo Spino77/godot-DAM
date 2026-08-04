@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bprp11e82vjyn"]
 
-[ext_resource type="Texture2D" uid="uid://dh0mjv14lg7dk" path="res://icon.svg" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://dixmir83thhju" path="res://jugador.tscn" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://dh0mjv14lg7dk" path="res://sprites/icon.svg" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://dixmir83thhju" path="res://escenas/jugador.tscn" id="2_0xm2m"]
 
 [node name="Node2D" type="Node2D" unique_id=568024470]
 
