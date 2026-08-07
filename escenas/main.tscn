@@ -14,7 +14,6 @@ scale = Vector2(9, 1.5625)
 texture = ExtResource("1_ig7tw")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1682131754]
-visible = false
 position = Vector2(576, 548)
 scale = Vector2(9, 1.5625)
 polygon = PackedVector2Array(59.1, -64, -59, -64, -63.8, -59, -64, 61, -60.3, 64, 59.6, 64, 63.9, 59, 64, -61.1)
@@ -30,8 +29,8 @@ texture = ExtResource("1_ig7tw")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2" unique_id=1525873570]
 position = Vector2(576, 548)
 scale = Vector2(9, 1.5625)
-polygon = PackedVector2Array(8.1111145, -80, -5.5555534, -80, -4.5555534, -15.360016, 8.444443, -17.279999)
+polygon = PackedVector2Array(8.444443, -76.16, 7.333336, -81.28, -4.666668, -81.28, -5.333332, -79.360016, -5.7777786, -75.52002, -5.7777786, -19.839996, -4.666668, -14.720001, 7.4444427, -14.720001, 8.555557, -20.480011)
 
 [node name="warrior" parent="." unique_id=848239340 instance=ExtResource("2_0kxa1")]
-position = Vector2(473, 392)
+position = Vector2(471, 417)
 collision_mask = 2
