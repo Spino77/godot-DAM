@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://bjcoffuf0ckix" path="res://scripts/personaje.gd" id="1_jpodt"]
 [ext_resource type="Texture2D" uid="uid://dh0mjv14lg7dk" path="res://sprites/icon.svg" id="2_njcx7"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(68, 68)
+
 [node name="NodoPersonaje" type="Node2D" unique_id=1783876786]
 
 [node name="Personaje" type="CharacterBody2D" parent="." unique_id=1594212248]
@@ -12,10 +15,9 @@ script = ExtResource("1_jpodt")
 scale = Vector2(0.5234375, 0.5234375)
 texture = ExtResource("2_njcx7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Personaje" unique_id=1504080814]
-visible = false
-scale = Vector2(0.5234375, 0.5234375)
-polygon = PackedVector2Array(59, -64, -58, -64, -63.8, -58, -64, 57.800003, -59, 62.800003, -59, 64, 57.6, 64, 63.9, 57, 64, -57.8, 59, -62.8)
-
 [node name="Camera2D" type="Camera2D" parent="Personaje" unique_id=1766882797]
 position_smoothing_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personaje" unique_id=1945555717]
+visible = false
+shape = SubResource("RectangleShape2D_g4v7s")
