@@ -1,8 +1,22 @@
 [gd_scene format=3 uid="uid://dnymctt7arlbw"]
 
 [ext_resource type="Texture2D" uid="uid://dh0mjv14lg7dk" path="res://sprites/icon.svg" id="1_fv3fn"]
+[ext_resource type="Script" uid="uid://cgje0q1optxsw" path="res://entrada_mazmorra.gd" id="1_ysebj"]
 
-[node name="Node2D" type="Node2D" unique_id=167429473]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qq7qp"]
+size = Vector2(128, 129)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=69396181]
+[node name="EntradaMazmorra" type="Node2D" unique_id=167429473]
+script = ExtResource("1_ysebj")
+
+[node name="SpriteEntrada" type="Sprite2D" parent="." unique_id=69396181]
 texture = ExtResource("1_fv3fn")
+
+[node name="AreaEntrada" type="Area2D" parent="." unique_id=1561874315]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEntrada" unique_id=1630430616]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_qq7qp")
+
+[connection signal="body_entered" from="AreaEntrada" to="." method="_on_area_entrada_body_entered"]
+[connection signal="body_exited" from="AreaEntrada" to="." method="_on_area_entrada_body_exited"]

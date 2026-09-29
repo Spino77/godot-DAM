@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(30, 62)
 
-[node name="NodoPersonaje" type="Node2D" unique_id=1783876786]
+[node name="Personaje" type="Node2D" unique_id=1783876786]
 
 [node name="Personaje" type="CharacterBody2D" parent="." unique_id=1594212248]
 script = ExtResource("1_jpodt")
