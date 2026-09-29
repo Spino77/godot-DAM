@@ -31,7 +31,7 @@ func generateMap():
 					if (x%dungeon_pos_random == 0):
 						var entrance = dun_entr.instantiate()
 						add_child(entrance)
-						entrance.position = Vector2i(x * 16, y)
+						entrance.position = Vector2i(x * 16, (suelo * 16) - 64)
 				else:
 					set_cell(Vector2i(x,y),1,Vector2i(1,0))
 
