@@ -26,7 +26,7 @@ func generateMap():
 	#lenght of the map
 	for x in 500:
 		#noise value for the floor
-		var floor = abs(noise.get_noise_2d(x,0) * 15)
+		var floor = abs(noise.get_noise_2d(x,0) * 7)
 		#height of the map
 		for y in range(-200,200):
 			#fills the map area with "sky" blocks, which will then be replaced by dirt or grass
