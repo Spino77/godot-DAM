@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var velocidad = 300.0
-var velocidad_salto = -350.0
+var velocidad_salto = -360.0
 var max_saltos = 2
 var saltos = 0
 
@@ -12,14 +12,18 @@ func _physics_process(delta: float) -> void:
 		saltos = max_saltos
 
 	if Input.is_action_just_pressed("saltar"):
-		if is_on_floor():
+		if is_on_floor() or is_on_wall():
 			velocity.y = velocidad_salto
 			saltos -= 1
 		elif saltos > 0:
 			velocity.y = velocidad_salto
 			saltos -= 1
-
-
+	#Changes character direction depending on movement
+	if Input.is_action_just_pressed("mov_derecha"):
+		$SpritePersonaje.flip_h = 1
+	if Input.is_action_just_pressed("mov_izquierda"):
+		$SpritePersonaje.flip_h = 0
+	#Movement
 	var direction := Input.get_axis("mov_izquierda", "mov_derecha")
 	if direction:
 		velocity.x = direction * velocidad

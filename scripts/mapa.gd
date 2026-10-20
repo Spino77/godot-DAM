@@ -30,13 +30,13 @@ func generateMap():
 		#height of the map
 		for y in range(-200,200):
 			#fills the map area with "sky" blocks, which will then be replaced by dirt or grass
-			set_cell(Vector2i(x,y),2,Vector2i(0,0))
+			set_cell(Vector2i(x,y),5,Vector2i(randi_range(0,1),randi_range(0,1)))
 		for y in range(floor, 160):
 			var noiseVal :float= abs(noise.get_noise_2d(x,y))
 			if noiseVal < 0.4:
 				#places grass
-				if y in range(floor, floor + 2):
-					set_cell(Vector2i(x,y),1,Vector2i(0,0))
+				if y in range(floor, floor + 1):
+					set_cell(Vector2i(x,y),4,Vector2i(randi_range(0,1),0))
 					#spawns every few blocks a dungeon entrance
 					if (dungeon_distance > 80 || dungeon_distance < 30):
 							dungeon_distance = 50 
@@ -45,10 +45,10 @@ func generateMap():
 						dungeon_distance -= randi_range(0, 15)
 						var entrance = dun_entr.instantiate()
 						add_child(entrance)
-						entrance.position = Vector2i(x * 16, (floor * 16) - 64)
+						entrance.position = Vector2i(x * 32, (floor * 32) - 64)
 				#places dirt
 				else:
-					set_cell(Vector2i(x,y),1,Vector2i(1,0))
+					set_cell(Vector2i(x,y),3,Vector2i(randi_range(0,1),randi_range(0,1)))
 
 #code for breaking and placing blocks
 #func _physics_process(delta: float) -> void:
