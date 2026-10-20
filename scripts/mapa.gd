@@ -26,14 +26,14 @@ func generateMap():
 	#lenght of the map
 	for x in 500:
 		#noise value for the floor
-		var floor = abs(noise.get_noise_2d(x,0) * 7)
+		var floor = abs(noise.get_noise_2d(x,0) * 15)
 		#height of the map
 		for y in range(-200,200):
 			#fills the map area with "sky" blocks, which will then be replaced by dirt or grass
 			set_cell(Vector2i(x,y),5,Vector2i(randi_range(0,1),randi_range(0,1)))
 		for y in range(floor, 160):
 			var noiseVal :float= abs(noise.get_noise_2d(x,y))
-			if noiseVal < 0.4:
+			if noiseVal < 0.6:
 				#places grass
 				if y in range(floor, floor + 1):
 					set_cell(Vector2i(x,y),4,Vector2i(randi_range(0,1),0))
