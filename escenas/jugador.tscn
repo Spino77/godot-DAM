@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bjcoffuf0ckix" path="res://scripts/personaje.gd" id="1_jpodt"]
 [ext_resource type="Texture2D" uid="uid://cj2ff1bmmy4t" path="res://sprites/Militia.png" id="2_jpodt"]
+[ext_resource type="Script" uid="uid://bwj6pv8enrppc" path="res://scripts/camera_2d.gd" id="3_njcx7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(29.600004, 58.199997)
@@ -26,3 +27,9 @@ position_smoothing_enabled = true
 position = Vector2(0.40000004, 1.8999997)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=43284414]
+position = Vector2(960, 540)
+enabled = false
+position_smoothing_enabled = true
+script = ExtResource("3_njcx7")
