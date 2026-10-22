@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bjcoffuf0ckix" path="res://scripts/personaje.gd" id="1_jpodt"]
 [ext_resource type="Texture2D" uid="uid://cj2ff1bmmy4t" path="res://sprites/Militia.png" id="2_jpodt"]
-[ext_resource type="Script" uid="uid://bwj6pv8enrppc" path="res://scripts/camera_2d.gd" id="3_njcx7"]
+[ext_resource type="Script" uid="uid://mpwmwh3v0gk8" path="res://escenas/player_camera.gd" id="3_njcx7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(29.600004, 58.199997)
@@ -22,14 +22,16 @@ texture = ExtResource("2_jpodt")
 [node name="Camera2D" type="Camera2D" parent="Personaje" unique_id=1766882797]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
+script = ExtResource("3_njcx7")
+
+[node name="Label" type="Label" parent="Personaje/Camera2D" unique_id=565358967]
+offset_left = -370.39996
+offset_top = -205.59999
+offset_right = -330.39996
+offset_bottom = -182.59999
+text = "hola"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Personaje" unique_id=1945555717]
 position = Vector2(0.40000004, 1.8999997)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_g4v7s")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=43284414]
-position = Vector2(960, 540)
-enabled = false
-position_smoothing_enabled = true
-script = ExtResource("3_njcx7")
