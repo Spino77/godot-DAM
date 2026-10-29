@@ -1,16 +1,21 @@
 extends CharacterBody2D
 
+#refer to other nodes
+@onready var lbl_coords = $PlayerInterface/Label
+
 var velocidad = 300.0
 var velocidad_salto = -360.0
 var max_saltos = 2
 var saltos = 0
+var debug_toggle = true
 
 func _physics_process(delta: float) -> void:
+	#checks if its on floor to reset the max jumps amount
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	if is_on_floor():
 		saltos = max_saltos
-
+	#jumping code
 	if Input.is_action_just_pressed("saltar"):
 		if is_on_floor() or is_on_wall():
 			velocity.y = velocidad_salto
@@ -29,5 +34,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * velocidad
 	else:
 		velocity.x = move_toward(velocity.x, 0, velocidad)
-
 	move_and_slide()
+	
+	if debug_toggle == true:
+		lbl_coords.text = str((global_position / 32).round())

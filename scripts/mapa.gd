@@ -8,6 +8,7 @@ var player = preload("res://escenas/jugador.tscn")
 var dun_entr = preload("res://escenas/entrada_mazmorra.tscn")
 var rng = RandomNumberGenerator.new()
 var dungeon_distance = 50
+@onready var tilemaplayer: TileMapLayer = $mapa
 
 #starting function that generated the "seed" for the map generation
 #as well as calling the functions that generate the map and instanciate the player
@@ -17,6 +18,11 @@ func _ready():
 	generateMap()
 	generateplayer()
 	
+func _physics_process(delta: float):
+	#var coords = tilemaplayer.local_to_map()
+	pass
+
+
 func generateplayer():
 	var j = player.instantiate()
 	add_child(j)

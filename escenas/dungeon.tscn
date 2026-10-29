@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dmagcbjyf38w5" path="res://sprites/dungeon_background.png" id="1_bfxf6"]
 [ext_resource type="Texture2D" uid="uid://qct3mdqxrodx" path="res://sprites/dungeon_wall.png" id="2_qa8w5"]
-[ext_resource type="Script" uid="uid://j40etlkilyx7" path="res://escenas/dungeon_map.gd" id="3_qa8w5"]
+[ext_resource type="Script" uid="uid://j40etlkilyx7" path="res://scripts/dungeon_map.gd" id="3_qa8w5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pjeaa"]
 texture = ExtResource("1_bfxf6")

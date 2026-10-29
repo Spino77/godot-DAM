@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://by6ptfofloq0h"]
 
-[ext_resource type="Script" uid="uid://cgje0q1optxsw" path="res://entrada_mazmorra.gd" id="1_hefb0"]
+[ext_resource type="Script" uid="uid://cgje0q1optxsw" path="res://scripts/entrada_mazmorra.gd" id="1_hefb0"]
 [ext_resource type="Texture2D" uid="uid://dh0mjv14lg7dk" path="res://sprites/icon.svg" id="2_jtn8v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qq7qp"]
