@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dixmir83thhju"]
 
 [ext_resource type="Script" uid="uid://bjcoffuf0ckix" path="res://scripts/personaje.gd" id="1_jpodt"]
-[ext_resource type="Texture2D" uid="uid://cj2ff1bmmy4t" path="res://sprites/Militia.png" id="2_jpodt"]
+[ext_resource type="Texture2D" uid="uid://kq54467by45i" path="res://sprites/personajeBase.png" id="2_jpodt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
-size = Vector2(29.600004, 58.199997)
+size = Vector2(29.600004, 69.40001)
 
 [sub_resource type="LabelSettings" id="LabelSettings_jpodt"]
 font_size = 32
@@ -17,16 +17,17 @@ script = ExtResource("1_jpodt")
 
 [node name="SpritePersonaje" type="Sprite2D" parent="Personaje" unique_id=35787280]
 texture_filter = 1
-position = Vector2(-1.1920929e-07, 8.5999975)
-scale = Vector2(1.25, 1.18125)
+position = Vector2(-2.3999999, 11.2)
+scale = Vector2(1.009375, 0.9538592)
 texture = ExtResource("2_jpodt")
+flip_h = true
 
 [node name="Camera2D" type="Camera2D" parent="Personaje" unique_id=1766882797]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Personaje" unique_id=1945555717]
-position = Vector2(0.40000004, 1.8999997)
+position = Vector2(0.40000004, -3.700003)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_g4v7s")
 

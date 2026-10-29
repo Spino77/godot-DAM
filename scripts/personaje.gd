@@ -3,7 +3,11 @@ extends CharacterBody2D
 #refer to other nodes
 @onready var lbl_coords = $PlayerInterface/Label
 
-var velocidad = 300.0
+#velocidad testing
+var velocidad = 600.0
+#velocidad normal
+#var velocidad = 300.0
+
 var velocidad_salto = -360.0
 var max_saltos = 2
 var saltos = 0
@@ -25,9 +29,9 @@ func _physics_process(delta: float) -> void:
 			saltos -= 1
 	#Changes character direction depending on movement
 	if Input.is_action_just_pressed("mov_derecha"):
-		$SpritePersonaje.flip_h = 1
-	if Input.is_action_just_pressed("mov_izquierda"):
 		$SpritePersonaje.flip_h = 0
+	if Input.is_action_just_pressed("mov_izquierda"):
+		$SpritePersonaje.flip_h = 1
 	#Movement
 	var direction := Input.get_axis("mov_izquierda", "mov_derecha")
 	if direction:
