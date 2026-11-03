@@ -1,11 +1,14 @@
 extends TileMapLayer
 
+#name of the world to save to file
+var worldName = "test1"
+
 #generated the noise that will be used for the procedural map generation
 var noise := FastNoiseLite.new()
 var blocks = 0
 #preload instances to be used later on
 var player = preload("res://escenas/jugador.tscn")
-var dun_entr = preload("res://escenas/entrada_mazmorra.tscn")
+var dun_entr = preload("res://escenas/dungeon_entrance.tscn")
 var rng = RandomNumberGenerator.new()
 var dungeon_distance = 50
 @onready var tilemaplayer: TileMapLayer = $mapa
@@ -15,8 +18,10 @@ var dungeon_distance = 50
 func _ready():
 	randomize()
 	noise.seed = randi()
-	generateMap()
+	readFile()
+	#generateMap()
 	generateplayer()
+	saveToFile()
 	
 func _physics_process(delta: float):
 	#var coords = tilemaplayer.local_to_map()
@@ -56,20 +61,16 @@ func generateMap():
 				else:
 					set_cell(Vector2i(x,y),3,Vector2i(randi_range(0,1),randi_range(0,1)))
 
-#code for breaking and placing blocks
-#func _physics_process(delta: float) -> void:
-	#if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		#var mouse_pos: Vector2 = get_global_mouse_position()
-		#var local_pos: Vector2 = to_local(mouse_pos)
-		#var tile_pos: Vector2i = local_to_map(local_pos)
-		#if get_cell_source_id(tile_pos) == 1:
-			#blocks += 1
-		#erase_cell(tile_pos)
-		#set_cell(tile_pos,2,Vector2i(0,0))
-	#if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT) and blocks > 0:
-		#var mouse_pos: Vector2 = get_global_mouse_position()
-		#var local_pos: Vector2 = to_local(mouse_pos)
-		#var tile_pos: Vector2i = local_to_map(local_pos)
-		#if get_cell_source_id(tile_pos) == 2:
-			#set_cell(tile_pos,1,Vector2i(1,0))
-			#blocks -= 1
+##SAVE MAP TO FILE AND LOAD
+
+func saveToFile():
+	#file to save
+	var save_file_path = "res://" + worldName + ".txt"
+	var array = get_tile_map_data_as_array()
+	var write_to_file = FileAccess.open(save_file_path, FileAccess.WRITE)
+	write_to_file.store_buffer(array)
+
+func readFile():
+	var save_file_path = "res://" + worldName + ".txt"
+	var array = FileAccess.get_file_as_bytes(save_file_path)
+	set_tile_map_data_from_array(array)

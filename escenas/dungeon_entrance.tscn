@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://by6ptfofloq0h"]
 
-[ext_resource type="Script" uid="uid://cgje0q1optxsw" path="res://scripts/entrada_mazmorra.gd" id="1_hefb0"]
-[ext_resource type="Texture2D" uid="uid://dh0mjv14lg7dk" path="res://sprites/icon.svg" id="2_jtn8v"]
+[ext_resource type="Script" uid="uid://cgje0q1optxsw" path="res://scripts/dungeon_entrance.gd" id="1_o41an"]
+[ext_resource type="Texture2D" uid="uid://dh0mjv14lg7dk" path="res://sprites/icon.svg" id="2_8mdux"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qq7qp"]
 size = Vector2(128, 129)
 
 [node name="EntradaMazmorra" type="Node2D" unique_id=167429473]
-script = ExtResource("1_hefb0")
+script = ExtResource("1_o41an")
 
 [node name="SpriteEntrada" type="Sprite2D" parent="." unique_id=69396181]
-texture = ExtResource("2_jtn8v")
+texture = ExtResource("2_8mdux")
 
 [node name="AreaEntrada" type="Area2D" parent="." unique_id=1561874315]
 

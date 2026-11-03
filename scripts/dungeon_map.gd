@@ -4,7 +4,7 @@ extends TileMapLayer
 var blocks = 0
 #preload instances to be used later on
 var player = preload("res://escenas/jugador.tscn")
-var dun_entr = preload("res://escenas/entrada_mazmorra.tscn")
+var dun_exit = preload("res://escenas/dungeon_exit.tscn")
 
 #starting function that generated the "seed" for the map generation
 #as well as calling the functions that generate the map and instanciate the player
@@ -35,6 +35,6 @@ func generateMap():
 				set_cell(Vector2i(x,y),2,Vector2i(randi_range(0,1),randi_range(0,1)))
 
 func spawnExit():
-	var entrance = dun_entr.instantiate()
+	var entrance = dun_exit.instantiate()
 	add_child(entrance)
 	entrance.position = Vector2i(175 * 32, (3 * 32) - 64)

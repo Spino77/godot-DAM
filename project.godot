@@ -16,10 +16,6 @@ config/features=PackedStringArray("4.7", "Forward Plus")
 run/max_fps=144
 config/icon="res://sprites/icon.svg"
 
-[autoload]
-
-GlobalVars="*uid://xlqiiw7qcpux"
-
 [display]
 
 window/size/viewport_width=1920
