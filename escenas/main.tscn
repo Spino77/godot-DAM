@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bprp11e82vjyn"]
 
 [ext_resource type="Texture2D" uid="uid://c68le84kd4btn" path="res://sprites/mapa.png" id="1_26pgj"]
+[ext_resource type="Script" uid="uid://djxvjltfij5p5" path="res://scripts/mapa.gd" id="1_a8p2b"]
 [ext_resource type="Texture2D" uid="uid://bryadum3ucnwk" path="res://sprites/dirt.png" id="1_dkga6"]
-[ext_resource type="Script" uid="uid://djxvjltfij5p5" path="res://scripts/mapa.gd" id="2_0kxa1"]
 [ext_resource type="Texture2D" uid="uid://cson1524mrc0t" path="res://sprites/cielo.png" id="2_a8p2b"]
 [ext_resource type="Texture2D" uid="uid://cxnvk70gjm2o8" path="res://sprites/grass.png" id="4_o8odp"]
 [ext_resource type="Texture2D" uid="uid://b1ysf6dfhol0j" path="res://sprites/sky.png" id="5_68mvh"]
@@ -65,10 +65,10 @@ sources/4 = SubResource("TileSetAtlasSource_lyxkq")
 sources/5 = SubResource("TileSetAtlasSource_dg7ii")
 
 [node name="MainMap" type="Node2D" unique_id=568024470]
+script = ExtResource("1_a8p2b")
 
-[node name="mapa" type="TileMapLayer" parent="." unique_id=2037477669 groups=["Persist"]]
+[node name="mapa" type="TileMapLayer" parent="." unique_id=2037477669]
 tile_set = SubResource("TileSet_57qmd")
-script = ExtResource("2_0kxa1")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1987888465]
 visible = false
