@@ -32,9 +32,9 @@ func _ready():
 	generateplayer()
 
 func generateplayer():
-	var j = player.instantiate()
-	mapa.add_child(j)
-	j.position = Vector2i(16, -64)
+	var player = player.instantiate()
+	mapa.add_child(player)
+	player.position = GlobalVars.player_pos
 
 func generateMap():
 	#lenght of the map
@@ -98,3 +98,11 @@ func readFile():
 		var entrance = dun_entr.instantiate()
 		mapa.add_child(entrance)
 		entrance.position = Vector2i(positions.get(0).to_int(),positions.get(1).to_int())
+
+#TODO | algo no funciona aqui (se tienen que guardar las posiciones de las entradas al cambiar de escena, para tener persistencia :(
+#func _exit_tree():
+	#entrance_pos_array.clear()
+	#for child: Node2D in self.get_children():
+		#if child is Node2D:
+			#entrance_pos_array.append(str(child.position.x) + " | " + str(child.position.y) + " , ")
+	#saveToFile()
