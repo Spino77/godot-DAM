@@ -11,6 +11,7 @@ var noise := FastNoiseLite.new()
 #preload instances to be used later on
 var player = preload("res://escenas/jugador.tscn")
 var dun_entr = preload("res://escenas/dungeon_entrance.tscn")
+
 @onready var mapa = $mapa
 
 #numbers used for randomized generation
@@ -33,7 +34,7 @@ func _ready():
 
 func generateplayer():
 	var player = player.instantiate()
-	mapa.add_child(player)
+	add_child(player)
 	player.position = GlobalVars.player_pos
 
 func generateMap():
@@ -99,10 +100,12 @@ func readFile():
 		mapa.add_child(entrance)
 		entrance.position = Vector2i(positions.get(0).to_int(),positions.get(1).to_int())
 
-#TODO | algo no funciona aqui (se tienen que guardar las posiciones de las entradas al cambiar de escena, para tener persistencia :(
-#func _exit_tree():
-	#entrance_pos_array.clear()
-	#for child: Node2D in self.get_children():
-		#if child is Node2D:
-			#entrance_pos_array.append(str(child.position.x) + " | " + str(child.position.y) + " , ")
+#if Input.is_action_just_pressed("select") and GlobalVars.enter_allow:
+	#var counter = 0
+	#var index = 0
+	#for item in entrance_pos_array:
+		#if str(item) == GlobalVars.current_dung_pos:
+			#index = counter
+		#counter += 1
+	#entrance_pos_array.remove_at(index)
 	#saveToFile()
