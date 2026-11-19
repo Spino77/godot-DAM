@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://by6ptfofloq0h"]
+
+[ext_resource type="Script" uid="uid://cgje0q1optxsw" path="res://scripts/dungeon_entrance.gd" id="1_o41an"]
+[ext_resource type="Texture2D" uid="uid://rsrq2ta8gvgk" path="res://sprites/entrada_dungeon.png" id="2_o41an"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qq7qp"]
+size = Vector2(128, 129)
+
+[node name="EntradaMazmorra" type="Node2D" unique_id=167429473]
+script = ExtResource("1_o41an")
+
+[node name="SpriteEntrada" type="Sprite2D" parent="." unique_id=69396181]
+texture_filter = 1
+position = Vector2(-1.66893e-06, 0.5)
+scale = Vector2(2, 2.015625)
+texture = ExtResource("2_o41an")
+
+[node name="AreaEntrada" type="Area2D" parent="." unique_id=1561874315]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEntrada" unique_id=1630430616]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_qq7qp")
+
+[connection signal="body_entered" from="AreaEntrada" to="." method="_on_area_entrada_body_entered"]
+[connection signal="body_exited" from="AreaEntrada" to="." method="_on_area_entrada_body_exited"]
