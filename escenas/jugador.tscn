@@ -1,21 +1,44 @@
 [gd_scene format=3 uid="uid://dixmir83thhju"]
 
-[ext_resource type="Script" uid="uid://bjcoffuf0ckix" path="res://scripts/personaje.gd" id="1_jpodt"]
-[ext_resource type="Texture2D" uid="uid://dh0mjv14lg7dk" path="res://sprites/icon.svg" id="2_njcx7"]
+[ext_resource type="Script" uid="uid://dxsfa7acc32gn" path="res://scripts/personaje.gd" id="1_jpodt"]
+[ext_resource type="Texture2D" uid="uid://btp3olhhyq3ns" path="res://sprites/personajeBase.png" id="2_jpodt"]
 
-[node name="NodoPersonaje" type="Node2D" unique_id=1783876786]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(29.600004, 69.40001)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jpodt"]
+font_size = 32
+
+[node name="Personaje" type="Node2D" unique_id=1783876786]
+scale = Vector2(1.25, 1.25)
 
 [node name="Personaje" type="CharacterBody2D" parent="." unique_id=1594212248]
 script = ExtResource("1_jpodt")
 
 [node name="SpritePersonaje" type="Sprite2D" parent="Personaje" unique_id=35787280]
-scale = Vector2(0.5234375, 0.5234375)
-texture = ExtResource("2_njcx7")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Personaje" unique_id=1504080814]
-visible = false
-scale = Vector2(0.5234375, 0.5234375)
-polygon = PackedVector2Array(59, -64, -58, -64, -63.8, -58, -64, 57.800003, -59, 62.800003, -59, 64, 57.6, 64, 63.9, 57, 64, -57.8, 59, -62.8)
+texture_filter = 1
+position = Vector2(-2.3999999, 11.2)
+scale = Vector2(1.009375, 0.9538592)
+texture = ExtResource("2_jpodt")
+flip_h = true
 
 [node name="Camera2D" type="Camera2D" parent="Personaje" unique_id=1766882797]
+zoom = Vector2(2, 2)
 position_smoothing_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personaje" unique_id=1945555717]
+position = Vector2(0.40000004, -3.700003)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="PlayerInterface" type="CanvasLayer" parent="Personaje" unique_id=1872779372]
+
+[node name="Label" type="Label" parent="Personaje/PlayerInterface" unique_id=1983398098]
+anchors_preset = -1
+anchor_right = 0.25
+anchor_bottom = 0.25
+offset_left = 49.0
+offset_top = 34.0
+offset_right = -391.0
+offset_bottom = -213.0
+label_settings = SubResource("LabelSettings_jpodt")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bx6ewkbnkw1rl"
-path="res://.godot/imported/Warrior_Sheet_recentered.png-5041168233cc844287c72edcb08689fe.ctex"
+path="res://.godot/imported/Warrior_Sheet_recentered.png-2435335795e252f269253c47437f9c34.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/characters/warrior/Warrior_Sheet_recentered.png"
-dest_files=["res://.godot/imported/Warrior_Sheet_recentered.png-5041168233cc844287c72edcb08689fe.ctex"]
+source_file="res://sprites/warrior_sheet/warrior/Warrior_Sheet_recentered.png"
+dest_files=["res://.godot/imported/Warrior_Sheet_recentered.png-2435335795e252f269253c47437f9c34.ctex"]
 
 [params]
 

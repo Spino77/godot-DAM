@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dhybtv4i0u0i7"]
 
-[ext_resource type="Script" uid="uid://diggw5f6mxaqs" path="res://warrior.gd" id="1_pkbmn"]
-[ext_resource type="Texture2D" uid="uid://bx6ewkbnkw1rl" path="res://sprites/characters/warrior/Warrior_Sheet_recentered.png" id="2_pkbmn"]
+[ext_resource type="Script" uid="uid://diggw5f6mxaqs" path="res://scripts/warrior.gd" id="1_pkbmn"]
+[ext_resource type="Texture2D" uid="uid://bx6ewkbnkw1rl" path="res://sprites/warrior_sheet/warrior/Warrior_Sheet_recentered.png" id="2_pkbmn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pkbmn"]
 radius = 8.0
@@ -449,6 +449,13 @@ size = Vector2(18, 37.25)
 platform_floor_layers = 4294901761
 platform_wall_layers = 2
 script = ExtResource("1_pkbmn")
+max_health = null
+defense = null
+damage1 = null
+damage2 = null
+crit_chance = null
+crit_multiplier_min = null
+crit_multiplier_max = null
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=962387072]
 zoom = Vector2(3, 3)

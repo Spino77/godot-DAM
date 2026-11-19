@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://bprp11e82vjyn"]
 
 [ext_resource type="Texture2D" uid="uid://dh0mjv14lg7dk" path="res://sprites/icon.svg" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://dhybtv4i0u0i7" path="res://warrior.tscn" id="2_0kxa1"]
+[ext_resource type="PackedScene" uid="uid://dixmir83thhju" path="res://escenas/jugador.tscn" id="2_0kxa1"]
 
 [node name="Node2D" type="Node2D" unique_id=568024470]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1467578348]
-collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2043045439]
 position = Vector2(576, 548)
@@ -19,7 +18,6 @@ scale = Vector2(9, 1.5625)
 polygon = PackedVector2Array(59.1, -64, -59, -64, -63.8, -59, -64, 61, -60.3, 64, 59.6, 64, 63.9, 59, 64, -61.1)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1225056549]
-collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=1786113593]
 position = Vector2(588, 473.00003)
@@ -31,6 +29,5 @@ position = Vector2(576, 548)
 scale = Vector2(9, 1.5625)
 polygon = PackedVector2Array(8.444443, -76.16, 7.333336, -81.28, -4.666668, -81.28, -5.333332, -79.360016, -5.7777786, -75.52002, -5.7777786, -19.839996, -4.666668, -14.720001, 7.4444427, -14.720001, 8.555557, -20.480011)
 
-[node name="warrior" parent="." unique_id=848239340 instance=ExtResource("2_0kxa1")]
-position = Vector2(471, 417)
-collision_mask = 2
+[node name="Personaje" parent="." unique_id=1783876786 instance=ExtResource("2_0kxa1")]
+position = Vector2(444, 303)

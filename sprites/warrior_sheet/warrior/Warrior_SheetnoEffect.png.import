@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cugaqkyy7on7t"
-path="res://.godot/imported/WomanWarriorDemo-Sheet.png-b4790973479fb3d6c4f1974efa6fb100.ctex"
+uid="uid://dejor8x8xjdae"
+path="res://.godot/imported/Warrior_SheetnoEffect.png-1845f5e95692c5c22dfa20d5263aaca1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/characters/warrior/WomanWarriorDemo-Sheet.png"
-dest_files=["res://.godot/imported/WomanWarriorDemo-Sheet.png-b4790973479fb3d6c4f1974efa6fb100.ctex"]
+source_file="res://sprites/warrior_sheet/warrior/Warrior_SheetnoEffect.png"
+dest_files=["res://.godot/imported/Warrior_SheetnoEffect.png-1845f5e95692c5c22dfa20d5263aaca1.ctex"]
 
 [params]
 
