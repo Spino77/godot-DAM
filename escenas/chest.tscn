@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://medr2gln2t5i"]
+
+[ext_resource type="Texture2D" uid="uid://dh0mjv14lg7dk" path="res://sprites/icon.svg" id="1_jxpeg"]
+[ext_resource type="Script" uid="uid://88cv7u5s03yl" path="res://escenas/chest.gd" id="1_pj078"]
+[ext_resource type="PackedScene" uid="uid://dclbrs2gfv6yj" path="res://escenas/chest_inventory.tscn" id="3_j22it"]
+
+[node name="Chest" type="Node2D" unique_id=2106445307]
+texture_filter = 1
+script = ExtResource("1_pj078")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1169504097]
+position = Vector2(64, 64)
+texture = ExtResource("1_jxpeg")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=602902575]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=394313758]
+position = Vector2(64, 64)
+scale = Vector2(1.9335938, 1.9335938)
+polygon = PackedVector2Array(59.1, -64, -59, -64, -63.8, -59, -64, 61, -60.3, 64, 59.6, 64, 63.9, 59, 64, -61.1)
+
+[node name="Chest_Inventory" parent="." unique_id=1229092793 instance=ExtResource("3_j22it")]
+texture_filter = 1
+offset_left = 12.0
+offset_top = -120.0
+offset_right = 116.0
+offset_bottom = -16.0
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

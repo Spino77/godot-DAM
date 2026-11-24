@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dxsfa7acc32gn" path="res://scripts/personaje.gd" id="1_jpodt"]
 [ext_resource type="Texture2D" uid="uid://btp3olhhyq3ns" path="res://sprites/personajeBase.png" id="2_jpodt"]
+[ext_resource type="PackedScene" uid="uid://c3qbeclqk3680" path="res://escenas/inventory_test.tscn" id="3_njcx7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(29.600004, 69.40001)
@@ -42,3 +43,9 @@ offset_top = 34.0
 offset_right = -391.0
 offset_bottom = -213.0
 label_settings = SubResource("LabelSettings_jpodt")
+
+[node name="InventoryTest" parent="Personaje/PlayerInterface" unique_id=64835445 instance=ExtResource("3_njcx7")]
+offset_left = 318.0
+offset_top = 40.0
+offset_right = -973.0
+offset_bottom = -851.0

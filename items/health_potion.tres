@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SwiftItemData" format=3 uid="uid://dtsvrg2seyl4t"]
+
+[ext_resource type="Script" uid="uid://cq5053m8y7vf1" path="res://addons/Swift_Inventory/Classes/SwiftItemData.gd" id="1_jl5pt"]
+[ext_resource type="Texture2D" uid="uid://dh0mjv14lg7dk" path="res://sprites/icon.svg" id="1_uly1j"]
+
+[resource]
+script = ExtResource("1_jl5pt")
+id = &"health_potion"
+display_name = "Health potion"
+description = "Restores health."
+icon = ExtResource("1_uly1j")
+max_stack_size = 32
+metadata/_custom_type_script = "uid://cq5053m8y7vf1"

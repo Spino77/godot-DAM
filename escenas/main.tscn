@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dh0mjv14lg7dk" path="res://sprites/icon.svg" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dixmir83thhju" path="res://escenas/jugador.tscn" id="2_0kxa1"]
+[ext_resource type="PackedScene" uid="uid://medr2gln2t5i" path="res://escenas/chest.tscn" id="3_jumxm"]
 
 [node name="Node2D" type="Node2D" unique_id=568024470]
 
@@ -31,3 +32,7 @@ polygon = PackedVector2Array(8.444443, -76.16, 7.333336, -81.28, -4.666668, -81.
 
 [node name="Personaje" parent="." unique_id=1783876786 instance=ExtResource("2_0kxa1")]
 position = Vector2(444, 303)
+
+[node name="Chest" parent="." unique_id=2106445307 instance=ExtResource("3_jumxm")]
+z_index = -1
+position = Vector2(865, 326)

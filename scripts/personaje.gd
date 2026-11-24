@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 #refer to other nodes
 @onready var lbl_coords = $PlayerInterface/Label
+@onready var inventory = $PlayerInterface/InventoryTest
 
 #velocidad testing
 var velocidad = 600.0
@@ -12,6 +13,10 @@ var velocidad_salto = -360.0
 var max_saltos = 2
 var saltos = 0
 var debug_toggle = true
+var inventory_open = false
+
+func _ready() -> void:
+	inventory.hide()
 
 func _physics_process(delta: float) -> void:
 	#checks if its on floor to reset the max jumps amount
@@ -42,3 +47,11 @@ func _physics_process(delta: float) -> void:
 	
 	if debug_toggle == true:
 		lbl_coords.text = str((global_position / 32).round())
+	
+	if Input.is_action_just_pressed("inventory"):
+		if inventory_open:
+			inventory.hide()
+			inventory_open = false
+		elif (!inventory_open):
+			inventory.show()
+			inventory_open = true
