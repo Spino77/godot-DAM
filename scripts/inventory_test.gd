@@ -6,4 +6,4 @@ extends VBoxContainer
 
 func _ready() -> void:
 	var player_grid := player_grid.swift_inventory
-	player_grid.try_add(health_potion, 252)
+	#player_grid.try_add(health_potion, 252)

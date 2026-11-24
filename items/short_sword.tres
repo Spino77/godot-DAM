@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SwiftItemData" format=3 uid="uid://bcy5irgi7ou60"]
+
+[ext_resource type="Script" uid="uid://cq5053m8y7vf1" path="res://addons/Swift_Inventory/Classes/SwiftItemData.gd" id="1_a0k7m"]
+[ext_resource type="Texture2D" uid="uid://y12846gdupml" path="res://sprites/short_sword.png" id="1_nvkua"]
+
+[resource]
+script = ExtResource("1_a0k7m")
+id = &"shortsword"
+display_name = "Shortsword"
+description = "A short sword"
+icon = ExtResource("1_nvkua")
+metadata/_custom_type_script = "uid://cq5053m8y7vf1"

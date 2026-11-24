@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SwiftItemData" format=3 uid="uid://bok546b6dvgmp"]
+
+[ext_resource type="Texture2D" uid="uid://dcx44wognq0h3" path="res://sprites/mace.png" id="1_ccm6u"]
+[ext_resource type="Script" uid="uid://cq5053m8y7vf1" path="res://addons/Swift_Inventory/Classes/SwiftItemData.gd" id="1_kij4r"]
+
+[resource]
+script = ExtResource("1_kij4r")
+id = &"mace"
+display_name = "Mace"
+description = "A blunt mace"
+icon = ExtResource("1_ccm6u")
+metadata/_custom_type_script = "uid://cq5053m8y7vf1"

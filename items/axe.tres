@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SwiftItemData" format=3 uid="uid://dyemwii3ctoef"]
+
+[ext_resource type="Script" uid="uid://cq5053m8y7vf1" path="res://addons/Swift_Inventory/Classes/SwiftItemData.gd" id="1_rui4e"]
+[ext_resource type="Texture2D" uid="uid://0xqgms00cljj" path="res://sprites/axe.png" id="1_vijfb"]
+
+[resource]
+script = ExtResource("1_rui4e")
+id = &"axe"
+display_name = "Axe"
+description = "An axe"
+icon = ExtResource("1_vijfb")
+metadata/_custom_type_script = "uid://cq5053m8y7vf1"
